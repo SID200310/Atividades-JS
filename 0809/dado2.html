@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado2</title>
+</head>
+<body>
+    <h1 id="dado1">dado1</h1>
+    <h1 id="dado2">dado2</h1>
+    <script>
+        function dado1(n1){
+            let sorteio = Math.random()*n1;
+            return Math.ceil(sorteio);
+        }
+        
+        function dado2(n2){
+            let sorteio = Math.random()*n2;
+            return Math.ceil(sorteio);
+        }
+
+        const t = document.getElementById("dado1");
+        t.innerHTML = dado1(6);
+
+        const t = document.getElementById("dado2");
+        t.innerHTML = dado2(6);
+    </script>
+</body>
+</html>

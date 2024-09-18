@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo Generico</h1>
+    <script>
+
+        function dado(n){
+            let sorteio = Math.random()*n;
+            return Math.ceil(sorteio);
+        }
+
+        const t = document.getElementById("titulo");
+        t.innerHTML = dado(12);
+
+    </script>
+
+</body>
+</html>

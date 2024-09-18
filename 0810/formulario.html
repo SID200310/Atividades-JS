@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <div>
+        <label for="n1">Número: </label>
+        <input type="number" name="n1" id="n1" required>
+    </div>
+    <div>
+        <label for="n2">Número: </label>
+        <input type="number" name="n2" id="n2" required>
+    </div>
+
+    <div>
+        <button onclick="somar()">somar</button>
+        <button onclick="substrair()">substrair</button>
+        <button onclick="multiplicar()">multiplicar</button>
+        <button onclick="dividir()">dividir</button>
+    </div>
+    <h1 id="resultado"></h1>
+    <script>
+        function somar() {
+            const result = document.getElementById("resultado");
+            const n1 = document.getElementById("n1");
+            const n2 = document.getElementById("n2");
+
+
+            let r = parseInt(n1.value) + parseInt(n2.value);
+
+            
+        }
+        function substrair() {
+            const result = document.getElementById("resultado");
+            const n1 = document.getElementById("n1");
+            const n2 = document.getElementById("n2");
+
+
+            let r = parseInt(n1.value) - parseInt(n2.value);
+
+            result.innerHTML = r;
+        }
+        function multiplicar() {
+            const result = document.getElementById("resultado");
+            const n1 = document.getElementById("n1");
+            const n2 = document.getElementById("n2");
+
+
+            let r = parseInt(n1.value) * parseInt(n2.value);
+
+            result.innerHTML = r;
+        }
+        function dividir() {
+            const result = document.getElementById("resultado");
+            const n1 = document.getElementById("n1");
+            const n2 = document.getElementById("n2");
+            r = "divisão por zero"
+
+            if(n2.value!="0"){
+                r = parseInt(n1.value) / parseInt(n2.value);
+            }
+            result.innerHTML = r;
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par e Impar</title>
+</head>
+<body>
+    <div>
+        <button id="par" onclick="p()">par</button>
+        <button id="impar" onclick="i()">impar</button>
+        <h1 id="resultado"></h1>
+    </div>
+    <script>
+        j = 0
+        c = 0
+        function p(){
+            const result = document.getElementById("resultado");
+            let re = Math.ceil(Math.random()*10 );
+            if(re%2==0){
+                n = "vc ganhou o numero sorteado "
+                j += 1
+            }else{
+                n = "vc perdeu o numero sorteado "
+                c += 1
+            }
+            result.innerHTML = n+re+" placar: "+" jogador: "+j+" computador: "+c;
+        }
+        function i(){
+            const result = document.getElementById("resultado");
+            let re = Math.ceil(Math.random()*10 );
+            if(re%2!=0){
+                n = "vc ganhou o numero sorteado "
+                j += 1
+            }else{
+                n = "vc perdeu o numero sorteado "
+                c += 1
+            }
+            result.innerHTML = n+re+" placar: "+" jogador: "+j+" computador: "+c;
+        }
+    </script>
+</body>
+</html>
